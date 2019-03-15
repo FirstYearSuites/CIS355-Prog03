@@ -14,20 +14,20 @@ if ($_POST){
     $pdo = Database::connect();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // Add the data to the database.
-    $sql = "INSERT INTO customers (name,email,mobile,password_hash) values(?, ?, ?, ?)";
+    $sql = "INSERT INTO customers (name,email,mobile,password_hash) values(?, ?, ?, ?)"; //creates values in the database
     $q = $pdo -> prepare($sql);
     $q -> execute(array($username, $email, $mobile, $password));
     // Now try to query that username / password combination to make sure the account was created successfully.
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "SELECT * FROM customers WHERE email = ? AND password_hash = ? LIMIT 1";
+    $sql = "SELECT * FROM customers WHERE email = ? AND password_hash = ? LIMIT 1"; //automatically logs user in
     $q = $pdo->prepare($sql);
     $q->execute(array($email,$password));
     $data = $q->fetch(PDO::FETCH_ASSOC);
-    // If we got data back, the account was created successfully. Go to customer.php.
+    // proper login if data returns
     if ($data) {
         $_SESSION["username"] = $username;
         header("Location: customer.php");
-    } else // Otherwise, try creating an account in again.
+    } else //retry login
         header("Location: createAccount.php?errorMessage=Something went wrong. Please try again.");
 }
 ?>
