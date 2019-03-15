@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87212073-c0f8-4fd4-8cfc-85cca6c210ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/success.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/customer.class.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/customer.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="269" column="48" lean-forward="true" selection-start-line="269" selection-start-column="48" selection-end-line="269" selection-end-column="48" />
+            <state relative-caret-position="2953">
+              <caret line="264" column="39" lean-forward="true" selection-start-line="264" selection-start-column="39" selection-end-line="264" selection-end-column="39" />
               <folding>
                 <element signature="e#39#45#0" expanded="true" />
               </folding>
@@ -186,12 +184,12 @@
       <workItem from="1551570597707" duration="1210000" />
       <workItem from="1551572024174" duration="2781000" />
       <workItem from="1551575688209" duration="2675000" />
-      <workItem from="1552669899525" duration="7037000" />
+      <workItem from="1552669899525" duration="7691000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13703000" />
+    <option name="totallyTimeSpent" value="14357000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -245,13 +243,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sessionExample.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -273,10 +264,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sessionExample.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/customer.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="269" column="48" lean-forward="true" selection-start-line="269" selection-start-column="48" selection-end-line="269" selection-end-column="48" />
+        <state relative-caret-position="2953">
+          <caret line="264" column="39" lean-forward="true" selection-start-line="264" selection-start-column="39" selection-end-line="264" selection-end-column="39" />
           <folding>
             <element signature="e#39#45#0" expanded="true" />
           </folding>

@@ -260,7 +260,8 @@ class Customer {
             </head>
             <body>
                 <a href='https://github.com/FirstYearSuites/Prog03' target='_blank'>GitHub</a><br />
-                <a href='Diagrams/CustomersFlow.pdf' target='_blank'>Flow Diagram</a><br />
+                <a href='UML.pdf' target='_blank'>UML Diagram</a><br />
+		        <a href='flow.pdf' target='_blank'>Flow Diagram</a><br />
                 <div class='container'>
                     <p class='row'>
                         <h3>$this->title" . "s" . "</h3>
