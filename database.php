@@ -2,13 +2,13 @@
 class Database
 {
     /*
-    // localhost
+    // localhost local machine database
     private static $dbName = 'projects' ;
     private static $dbHost = '127.0.0.1' ;
     private static $dbUsername = 'root';
     private static $dbUserPassword = '';
     */
-    // csis.svsu.edu
+    // csis.svsu.edu database
     private static $dbName = 'bhfalor355wi19' ;
     private static $dbHost = '10.8.30.49' ;
     private static $dbUsername = 'bhfalor355wi19';

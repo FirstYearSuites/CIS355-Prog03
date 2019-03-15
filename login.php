@@ -9,21 +9,21 @@ if ($_POST){
     // Get the username and password from the post.
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $password = MD5($password);
+    $password = MD5($password); //encrypts password using MD5 encryption
     $pdo = Database::connect();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // See if this username / password combination exists in the database.
-    $sql = "SELECT * FROM customers WHERE email='$username' AND password_hash ='$password' LIMIT 1";
+    $sql = "SELECT * FROM customers WHERE email='$username' AND password_hash ='$password' LIMIT 1"; //query the database for user-entered username and password
     $q = $pdo -> prepare($sql);
     $q -> execute(array());
     $data = $q->fetch(PDO::FETCH_ASSOC);
-    // If we got data back, the username / password combination was correct.
+    // returns data then we have found a successful query match
     if ($data) {
         $_SESSION["username"] = $username;
-        // Go to the customer page.
+        // goes to the listing page
         header("Location: customer.php");
-    } else // Otherwise, try to log in again.
+    } else // attempt login again, failed login
         header("Location: login.php?errorMessage=Invalid Username or Password!");
 }
 ?>
