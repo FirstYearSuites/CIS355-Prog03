@@ -1,17 +1,26 @@
 <?php
+session_start();
+if (!isset($_SESSION["username"])){
+    header("Location: login.php");
+}
 // include the class that handles database connections
 require "database.php";
 // include the class containing functions/methods for "customer" table
-// Note: this application uses "customer" table, not "cusotmers" table
+
 require "customer.class.php";
 $cust = new Customer();
 
 // set active record field values, if any
 // (field values not set for display_list and display_create_form)
-if(isset($_GET["id"]))          $id = $_GET["id"];
-if(isset($_POST["name"]))       $cust->name = $_POST["name"];
-if(isset($_POST["email"]))      $cust->email = $_POST["email"];
-if(isset($_POST["mobile"]))     $cust->mobile = $_POST["mobile"];
+if(isset($_GET["id"]))                  $id = $_GET["id"];
+if(isset($_POST["name"]))               $cust->name = $_POST["name"];
+if(isset($_POST["email"]))              $cust->email = $_POST["email"];
+if(isset($_POST["mobile"]))             $cust->mobile = $_POST["mobile"];
+if(isset($_POST["description"]))        $cust->description = $_POST["description"];
+if (isset($_FILES['Filename']))         $cust->fileName       = $_FILES['Filename']['name'];
+if (isset($_FILES['Filename']))         $cust->tempFileName   = $_FILES['Filename']['tmp_name'];
+if (isset($_FILES['Filename']))         $cust->fileSize       = $_FILES['Filename']['size'];
+if (isset($_FILES['Filename']))         $cust->fileType       = $_FILES['Filename']['type'];
 // "fun" is short for "function" to be invoked
 if(isset($_GET["fun"])) $fun = $_GET["fun"];
 else $fun = "display_list";
